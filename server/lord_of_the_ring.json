@@ -1,0 +1,30 @@
+{
+    "name": "Middle Earth Web API",
+    "authority": "MORDOR:Sauron",
+    "version": "1.0",
+    "formats": [
+        "json"
+    ],
+    "methods": {
+        "get_ring": {
+            "path": "/rings/:id.:format",
+            "required_params": [
+                "id",
+                "format"
+            ],
+            "method": "GET",
+            "authentication": true,
+            "expected_status": [200, 403]
+
+        },
+        "get_precious": {
+            "path": "/rings/9.:format",
+            "required_params": [
+                "format"
+            ],
+            "authentication": true,
+            "method": "GET",
+            "expected_status": [200, 403]
+        }
+    }
+}
